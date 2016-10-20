@@ -23,10 +23,10 @@ public class DbUpdate {
         reader.close();
         PreparedDataCheck.check(path);
         Connection conn = DriverManager.getConnection(url, user, password);
-//        Categories categories = new Categories(path);
-//        categories.loadToDB(conn);
-//        Users users = new Users(path);
-//        users.loadToDB(conn);
+        Categories categories = new Categories(path);
+        categories.loadToDB(conn);
+        Users users = new Users(path);
+        users.loadToDB(conn);
         Lots lots = new Lots(path);
         lots.loadToDB(conn);
         conn.close();
